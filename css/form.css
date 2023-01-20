@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* width: 1100px; */
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(190, 190, 190);
+}
+
+.container-animation {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    align-self: stretch;
+    width: 550px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.container-form__header {
+    font-family: sans-serif;
+    font-size: 28px;
+    color: #7CC2FF;
+    margin-bottom: 10px;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__names,
+.form__contacts,
+.form__address-and-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form__input1,
+.form__input3,
+.form__input5 {
+    margin-right: 20px;
+    flex-grow: 2;
+}
+
+.form__input2,
+.form__input4 {
+    flex-grow: 2;
+}
+
+.input__label {
+    order: 1;
+    font-family: sans-serif;
+    font-size: 14.5px;
+    color: #838383;
+    margin-bottom: 5px;
+    transition: color .2s ease;
+    padding-left: 10px;
+}
+
+.input__field:focus+.input__label {
+    color: #7CC2FF;
+}
+
+.input__field {
+    order: 2;
+    padding: 16px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 15px rgb(190, 190, 190);
+    font-family: sans-serif;
+    color: #6d6d6d;
+}
+
+.input__field:focus {
+    box-sizing: border-box;
+    outline: 1px solid #7CC2FF;
+    /* border: 1px solid #7CC2FF; */
+}
+
+.button-start-animation {
+    align-self: flex-end;
+    padding: 16px 35px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    background-color: #7CC2FF;
+    color: white;
+    margin-bottom: 10px;
+    transition-property: background-color color box-shadow;
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.button-start-animation:hover {
+    box-shadow: 0 0 8px rgb(190, 190, 190);
+}
+
+.button-start-animation:focus {
+    outline: 1px solid #7CC2FF;
+}
+
+.button-start-animation:active {
+    background-color: #55b0ff;
+}
+
+
+@media (max-width: 1280px) and (min-width: 768px) {
+    .container {
+        flex-direction: column;
+        min-width: 600px;
+    }
+
+    .container-form {
+        width: 600px;
+    }
+
+    .container-form__header {
+        align-self: flex-start;
+        padding-left: 10px;
+        margin-bottom: 25px;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container-animation {
+        transform: scale(0.7) translateY(-13%);
+    }
+
+    .container-form {
+        width: auto;
+    }
+
+    .container-form__header {
+        align-self: center;
+        padding-left: 10px;
+        margin-bottom: 25px;
+    }
+
+    .form__names,
+    .form__contacts,
+    .form__address-and-button {
+        flex-direction: column;
+    }
+
+    .form__input1,
+    .form__input3,
+    .form__input5 {
+        margin-right: 0;
+    }
+
+    .form__input5{
+        margin-bottom: 25px;
+    }
+
+    .button-start-animation{
+        align-self: auto;
+    }
+
+    .container-animation-wrapper{
+        margin-top: 20px;
+        height: 320px;
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container-animation {
+        transform: scale(0.48) translateY(-50%);
+    }
+
+    .container-form {
+        padding: 10px;
+        width: auto;
+    }
+
+    .container-form__header {
+        align-self: center;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .input__label {
+        font-size: 12px;
+    }
+    .input__field{
+        padding: 10px;
+    }
+
+    .form__names,
+    .form__contacts,
+    .form__address-and-button {
+        flex-direction: column;
+    }
+
+    .form__input1,
+    .form__input3,
+    .form__input5 {
+        margin-right: 0;
+    }
+
+    .form__input5{
+        margin-bottom: 25px;
+    }
+
+    .button-start-animation{
+        align-self: auto;
+    }
+
+    .container-animation-wrapper{
+        margin-top: 30px;
+        height: 220px;
+        overflow: hidden;
+    }
+
+}
